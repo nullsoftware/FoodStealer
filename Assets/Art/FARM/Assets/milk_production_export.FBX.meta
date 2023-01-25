@@ -1,0 +1,545 @@
+fileFormatVersion: 2
+guid: a8714ebede1cd934eb8efcc8d35a2705
+timeCreated: 1462276884
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: chain_element_
+    100002: chain_element_001
+    100004: chain_element_002
+    100006: chain_element_003
+    100008: chain_element_004
+    100010: chain_element_005
+    100012: chain_element_006
+    100014: chain_element_007
+    100016: chain_element_008
+    100018: chain_element_009
+    100020: chain_element_010
+    100022: chain_element_011
+    100024: chain_element_012
+    100026: chain_element_013
+    100028: chain_element_014
+    100030: chain_element_015
+    100032: chain_element_016
+    100034: chain_element_017
+    100036: chain_element_018
+    100038: chain_element_019
+    100040: chain_element_020
+    100042: chain_element_021
+    100044: chain_element_022
+    100046: chain_element_023
+    100048: chain_element_024
+    100050: milk_production
+    100052: milk_production_chimney_01
+    100054: milk_production_chimney_02
+    100056: milk_production_chimney_03
+    100058: milk_production_drive_01
+    100060: milk_production_drive_02
+    100062: milk_production_drive_03
+    100064: //RootNode
+    100066: milk_production_gate_back
+    100068: milk_production_gate_back_child
+    100070: milk_production_gate_front
+    100072: milk_production_gate_front_child
+    100074: milk_production_milk01
+    100076: milk_production_milk02
+    100078: milk_production_milk03
+    100080: milk_production_milk04
+    100082: milk_production_piston_01
+    100084: milk_production_piston_02
+    100086: milk_production_product
+    100088: milk_production_product_child_01
+    100090: milk_production_product_child_02
+    100092: milk_production_pump
+    100094: root_milk_production
+    400000: chain_element_
+    400002: chain_element_001
+    400004: chain_element_002
+    400006: chain_element_003
+    400008: chain_element_004
+    400010: chain_element_005
+    400012: chain_element_006
+    400014: chain_element_007
+    400016: chain_element_008
+    400018: chain_element_009
+    400020: chain_element_010
+    400022: chain_element_011
+    400024: chain_element_012
+    400026: chain_element_013
+    400028: chain_element_014
+    400030: chain_element_015
+    400032: chain_element_016
+    400034: chain_element_017
+    400036: chain_element_018
+    400038: chain_element_019
+    400040: chain_element_020
+    400042: chain_element_021
+    400044: chain_element_022
+    400046: chain_element_023
+    400048: chain_element_024
+    400050: milk_production
+    400052: milk_production_chimney_01
+    400054: milk_production_chimney_02
+    400056: milk_production_chimney_03
+    400058: milk_production_drive_01
+    400060: milk_production_drive_02
+    400062: milk_production_drive_03
+    400064: //RootNode
+    400066: milk_production_gate_back
+    400068: milk_production_gate_back_child
+    400070: milk_production_gate_front
+    400072: milk_production_gate_front_child
+    400074: milk_production_milk01
+    400076: milk_production_milk02
+    400078: milk_production_milk03
+    400080: milk_production_milk04
+    400082: milk_production_piston_01
+    400084: milk_production_piston_02
+    400086: milk_production_product
+    400088: milk_production_product_child_01
+    400090: milk_production_product_child_02
+    400092: milk_production_pump
+    400094: root_milk_production
+    4300000: milk_production
+    7400000: milk_production_start
+    7400002: milk_production_loop
+    7400004: milk_production_end
+    9500000: //RootNode
+    13700000: milk_production
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: milk_production_start
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: milk_production
+        weight: 1
+      - path: root_milk_production
+        weight: 1
+      - path: root_milk_production/chain_element_
+        weight: 1
+      - path: root_milk_production/chain_element_001
+        weight: 1
+      - path: root_milk_production/chain_element_002
+        weight: 1
+      - path: root_milk_production/chain_element_003
+        weight: 1
+      - path: root_milk_production/chain_element_004
+        weight: 1
+      - path: root_milk_production/chain_element_005
+        weight: 1
+      - path: root_milk_production/chain_element_006
+        weight: 1
+      - path: root_milk_production/chain_element_007
+        weight: 1
+      - path: root_milk_production/chain_element_008
+        weight: 1
+      - path: root_milk_production/chain_element_009
+        weight: 1
+      - path: root_milk_production/chain_element_010
+        weight: 1
+      - path: root_milk_production/chain_element_011
+        weight: 1
+      - path: root_milk_production/chain_element_012
+        weight: 1
+      - path: root_milk_production/chain_element_013
+        weight: 1
+      - path: root_milk_production/chain_element_014
+        weight: 1
+      - path: root_milk_production/chain_element_015
+        weight: 1
+      - path: root_milk_production/chain_element_016
+        weight: 1
+      - path: root_milk_production/chain_element_017
+        weight: 1
+      - path: root_milk_production/chain_element_018
+        weight: 1
+      - path: root_milk_production/chain_element_019
+        weight: 1
+      - path: root_milk_production/chain_element_020
+        weight: 1
+      - path: root_milk_production/chain_element_021
+        weight: 1
+      - path: root_milk_production/chain_element_022
+        weight: 1
+      - path: root_milk_production/chain_element_023
+        weight: 1
+      - path: root_milk_production/chain_element_024
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_01
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_02
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_03
+        weight: 1
+      - path: root_milk_production/milk_production_drive_01
+        weight: 1
+      - path: root_milk_production/milk_production_drive_02
+        weight: 1
+      - path: root_milk_production/milk_production_drive_03
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back/milk_production_gate_back_child
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front/milk_production_gate_front_child
+        weight: 1
+      - path: root_milk_production/milk_production_milk01
+        weight: 1
+      - path: root_milk_production/milk_production_milk02
+        weight: 1
+      - path: root_milk_production/milk_production_milk03
+        weight: 1
+      - path: root_milk_production/milk_production_milk04
+        weight: 1
+      - path: root_milk_production/milk_production_piston_01
+        weight: 1
+      - path: root_milk_production/milk_production_piston_02
+        weight: 1
+      - path: root_milk_production/milk_production_product
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_01
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_02
+        weight: 1
+      - path: root_milk_production/milk_production_pump
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: milk_production_loop
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: milk_production
+        weight: 1
+      - path: root_milk_production
+        weight: 1
+      - path: root_milk_production/chain_element_
+        weight: 1
+      - path: root_milk_production/chain_element_001
+        weight: 1
+      - path: root_milk_production/chain_element_002
+        weight: 1
+      - path: root_milk_production/chain_element_003
+        weight: 1
+      - path: root_milk_production/chain_element_004
+        weight: 1
+      - path: root_milk_production/chain_element_005
+        weight: 1
+      - path: root_milk_production/chain_element_006
+        weight: 1
+      - path: root_milk_production/chain_element_007
+        weight: 1
+      - path: root_milk_production/chain_element_008
+        weight: 1
+      - path: root_milk_production/chain_element_009
+        weight: 1
+      - path: root_milk_production/chain_element_010
+        weight: 1
+      - path: root_milk_production/chain_element_011
+        weight: 1
+      - path: root_milk_production/chain_element_012
+        weight: 1
+      - path: root_milk_production/chain_element_013
+        weight: 1
+      - path: root_milk_production/chain_element_014
+        weight: 1
+      - path: root_milk_production/chain_element_015
+        weight: 1
+      - path: root_milk_production/chain_element_016
+        weight: 1
+      - path: root_milk_production/chain_element_017
+        weight: 1
+      - path: root_milk_production/chain_element_018
+        weight: 1
+      - path: root_milk_production/chain_element_019
+        weight: 1
+      - path: root_milk_production/chain_element_020
+        weight: 1
+      - path: root_milk_production/chain_element_021
+        weight: 1
+      - path: root_milk_production/chain_element_022
+        weight: 1
+      - path: root_milk_production/chain_element_023
+        weight: 1
+      - path: root_milk_production/chain_element_024
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_01
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_02
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_03
+        weight: 1
+      - path: root_milk_production/milk_production_drive_01
+        weight: 1
+      - path: root_milk_production/milk_production_drive_02
+        weight: 1
+      - path: root_milk_production/milk_production_drive_03
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back/milk_production_gate_back_child
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front/milk_production_gate_front_child
+        weight: 1
+      - path: root_milk_production/milk_production_milk01
+        weight: 1
+      - path: root_milk_production/milk_production_milk02
+        weight: 1
+      - path: root_milk_production/milk_production_milk03
+        weight: 1
+      - path: root_milk_production/milk_production_milk04
+        weight: 1
+      - path: root_milk_production/milk_production_piston_01
+        weight: 1
+      - path: root_milk_production/milk_production_piston_02
+        weight: 1
+      - path: root_milk_production/milk_production_product
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_01
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_02
+        weight: 1
+      - path: root_milk_production/milk_production_pump
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: milk_production_end
+      takeName: Take 001
+      firstFrame: 350
+      lastFrame: 500
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: milk_production
+        weight: 1
+      - path: root_milk_production
+        weight: 1
+      - path: root_milk_production/chain_element_
+        weight: 1
+      - path: root_milk_production/chain_element_001
+        weight: 1
+      - path: root_milk_production/chain_element_002
+        weight: 1
+      - path: root_milk_production/chain_element_003
+        weight: 1
+      - path: root_milk_production/chain_element_004
+        weight: 1
+      - path: root_milk_production/chain_element_005
+        weight: 1
+      - path: root_milk_production/chain_element_006
+        weight: 1
+      - path: root_milk_production/chain_element_007
+        weight: 1
+      - path: root_milk_production/chain_element_008
+        weight: 1
+      - path: root_milk_production/chain_element_009
+        weight: 1
+      - path: root_milk_production/chain_element_010
+        weight: 1
+      - path: root_milk_production/chain_element_011
+        weight: 1
+      - path: root_milk_production/chain_element_012
+        weight: 1
+      - path: root_milk_production/chain_element_013
+        weight: 1
+      - path: root_milk_production/chain_element_014
+        weight: 1
+      - path: root_milk_production/chain_element_015
+        weight: 1
+      - path: root_milk_production/chain_element_016
+        weight: 1
+      - path: root_milk_production/chain_element_017
+        weight: 1
+      - path: root_milk_production/chain_element_018
+        weight: 1
+      - path: root_milk_production/chain_element_019
+        weight: 1
+      - path: root_milk_production/chain_element_020
+        weight: 1
+      - path: root_milk_production/chain_element_021
+        weight: 1
+      - path: root_milk_production/chain_element_022
+        weight: 1
+      - path: root_milk_production/chain_element_023
+        weight: 1
+      - path: root_milk_production/chain_element_024
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_01
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_02
+        weight: 1
+      - path: root_milk_production/milk_production_chimney_03
+        weight: 1
+      - path: root_milk_production/milk_production_drive_01
+        weight: 1
+      - path: root_milk_production/milk_production_drive_02
+        weight: 1
+      - path: root_milk_production/milk_production_drive_03
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back
+        weight: 1
+      - path: root_milk_production/milk_production_gate_back/milk_production_gate_back_child
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front
+        weight: 1
+      - path: root_milk_production/milk_production_gate_front/milk_production_gate_front_child
+        weight: 1
+      - path: root_milk_production/milk_production_milk01
+        weight: 1
+      - path: root_milk_production/milk_production_milk02
+        weight: 1
+      - path: root_milk_production/milk_production_milk03
+        weight: 1
+      - path: root_milk_production/milk_production_milk04
+        weight: 1
+      - path: root_milk_production/milk_production_piston_01
+        weight: 1
+      - path: root_milk_production/milk_production_piston_02
+        weight: 1
+      - path: root_milk_production/milk_production_product
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_01
+        weight: 1
+      - path: root_milk_production/milk_production_product/milk_production_product_child_02
+        weight: 1
+      - path: root_milk_production/milk_production_pump
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
