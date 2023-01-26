@@ -32,7 +32,7 @@ public class CameraZoom : MonoBehaviour
                 Quaternion.LookRotation(target - transform.position, Vector3.up),
                 _rotationSpeed * Time.deltaTime);
             
-            if (Vector3.Distance(transform.position, target) < 0.001f)
+            if (Vector3.Distance(transform.position, target) < 0.01f)
             {
                 break;
             }
