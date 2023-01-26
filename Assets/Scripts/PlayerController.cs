@@ -18,12 +18,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private AudioSource _winAudio;
     [SerializeField] private AudioSource _loseAudio;
+    [SerializeField] private AudioSource _targetItemCollectedAudio;
+    [SerializeField] private AudioSource _wrongItemCollectedAudio;
 
     private Animator _playerAnimator;
+    private int _wallLayerMask;
 
     private readonly Dictionary<FoodItemType, byte> _counters 
         = new Dictionary<FoodItemType, byte>();
 
+    private MoveDirection _allowedMoveDirection = MoveDirection.All;
     private FoodItemType _goalType;
     private byte _goalCount;
     private bool _isWaiting;
@@ -39,10 +43,11 @@ public class PlayerController : MonoBehaviour
         }
 
         _goalType = (FoodItemType)foodTypes.GetValue(Random.Range(1, foodTypes.Length));
-        _goalCount = (byte)Random.Range(3, 6);
+        _goalCount = (byte)Random.Range(1, 5 + 1);
         _goalText.text = $"Collect {_goalCount} {_goalType}s";
 
         _playerAnimator = GetComponent<Animator>();
+        _wallLayerMask = LayerMask.NameToLayer("Wall");
     }
 
     private void Update()
@@ -88,10 +93,20 @@ public class PlayerController : MonoBehaviour
             float targetZ = target.transform.position.z + 1f;
             Vector3 pos = transform.position;
 
-            if (pos.z < targetZ) 
+            if (pos.z < targetZ)
+            {
+                if (!_allowedMoveDirection.HasFlag(MoveDirection.Forward))
+                    break;
+
                 pos.z += _moveSpeed * Time.deltaTime;
+            }
             else
+            {
+                if (!_allowedMoveDirection.HasFlag(MoveDirection.Backward))
+                    break;
+
                 pos.z -= _moveSpeed * Time.deltaTime;
+            }
 
             transform.position = pos;
 
@@ -99,12 +114,7 @@ public class PlayerController : MonoBehaviour
             {
                 targetReached = true;
                 break;
-            }
-
-            //if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit))
-            //{
-            //    break;
-            //}
+            } 
 
             yield return null;
         }
@@ -114,18 +124,21 @@ public class PlayerController : MonoBehaviour
 
         if (!target.isActiveAndEnabled || !targetReached)
         {
+            _currentCoroutine = null;
+
             yield break;
         }
 
         _playerAnimator.SetTrigger(AnimationConstants.StartPickUpTriggerName);
+        yield return new WaitForSeconds(0.5f); // temp fix
         _isWaiting = true;
-        
         while (_isWaiting)
         {
             yield return null;
         }
 
         rigidbody.isKinematic = true;
+        rigidbody.detectCollisions = false;
         target.enabled = false;
         target.transform.parent = _hand;
         target.transform.localPosition = Vector3.zero;
@@ -140,11 +153,20 @@ public class PlayerController : MonoBehaviour
 
         target.transform.parent = null;
         rigidbody.isKinematic = false;
-        rigidbody.velocity = new Vector3(Random.Range(0.3f, 0.6f), 1, 1) * Random.Range(1.5f, 1.8f);
+        rigidbody.detectCollisions = true;
+        rigidbody.constraints = RigidbodyConstraints.None;
+        rigidbody.velocity = new Vector3(Random.value, 0, Random.value);
         _playerAnimator.SetTrigger(AnimationConstants.EndPickUpTriggerName);
 
         if (target.ItemType == _goalType)
+        {
+            _targetItemCollectedAudio.Play();
             _pointsDisplayer.ShowFloatingPoint(Camera.main.WorldToScreenPoint(target.transform.position));
+        }
+        else
+        {
+            _wrongItemCollectedAudio.Play();
+        }
         _counters[target.ItemType]++;
 
         _isWaiting = true;
@@ -153,7 +175,6 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
 
-        rigidbody.isKinematic = true;
         target.transform.parent = _cart;
 
         CheckConditions();
@@ -167,7 +188,7 @@ public class PlayerController : MonoBehaviour
             if (counter.Value >= _goalCount)
             {
                 _spawner.Stop();
-                _zoom.ZoomToTarget(transform);
+                _zoom.ZoomToTarget(transform, 0.4f);
                 enabled = false;
 
                 if (counter.Key.Equals(_goalType))
@@ -183,13 +204,10 @@ public class PlayerController : MonoBehaviour
         _winAudio.Play();
 
         _playerAnimator.SetTrigger(AnimationConstants.DanceTriggerName);
-        _isWaiting = true;
-        while (_isWaiting) 
-        {
-            yield return null;
-        }
+        //_headController.Emotion = PlayerEmotion.Talk;
+        yield return new WaitForSeconds(4f);
 
-        _restarter.ShowGameOverDialog("You won, good job!");
+        _restarter.ShowGameOverDialog("Level passed!");
     }
 
     private IEnumerator DeclareLose()
@@ -197,11 +215,8 @@ public class PlayerController : MonoBehaviour
         _loseAudio.Play();
 
         _playerAnimator.SetTrigger(AnimationConstants.CryTriggerName);
-        _isWaiting = true;
-        while (_isWaiting)
-        {
-            yield return null;
-        }
+        _headController.Emotion = PlayerEmotion.Cross;
+        yield return new WaitForSeconds(4f);
 
         _restarter.ShowGameOverDialog("You lose :(" + System.Environment.NewLine + "You collected wrong items.");
     }

@@ -15,6 +15,7 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] private float _startDelay = 6;
     [SerializeField] private float _minDelay = 2;
     [SerializeField] private float _maxDelay = 4;
+    [SerializeField] private Animator _audioAnimator;
 
     private readonly Dictionary<FoodItemType, GameObject> _spawnableItems
         = new Dictionary<FoodItemType, GameObject>();
@@ -38,6 +39,7 @@ public class ItemSpawner : MonoBehaviour
     public void Stop()
     {
         StopAllCoroutines();
+        _audioAnimator.SetTrigger(AnimationConstants.MuteTriggerName);
     }
 
     public void ReturnObject(FoodItem item)
@@ -74,9 +76,9 @@ public class ItemSpawner : MonoBehaviour
         {
             FoodItemType requestedType = _spawnableItems.Keys.ToArray()[Random.Range(0, _spawnableItems.Count)];
 
-            if (requestedType.Equals(_lastSpawnedType))
+            if (requestedType == _lastSpawnedType)
             {
-                if (_lastSpawnedTypeRepeats > MaxItemRepeats)
+                if (_lastSpawnedTypeRepeats >= MaxItemRepeats)
                     continue;
                 else
                     _lastSpawnedTypeRepeats++;
@@ -87,7 +89,7 @@ public class ItemSpawner : MonoBehaviour
                 _lastSpawnedTypeRepeats = 1;
             }
 
-            item = RequestObject(_spawnableItems.Keys.ToArray()[Random.Range(0, _spawnableItems.Count)]);
+            item = RequestObject(requestedType);
 
             item.Refresh();
             item.transform.position = _spawnPositions[Random.Range(0, _spawnPositions.Length)].position;

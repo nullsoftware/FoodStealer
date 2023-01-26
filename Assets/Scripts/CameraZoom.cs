@@ -6,6 +6,7 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {
     [SerializeField] private float _zoomSpeed = 2f;
+    [SerializeField] private float _rotationSpeed = 2f;
 
     private Camera _camera;
 
@@ -26,7 +27,11 @@ public class CameraZoom : MonoBehaviour
         {
             var step = _zoomSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, step);
-
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation, 
+                Quaternion.LookRotation(target - transform.position, Vector3.up),
+                _rotationSpeed * Time.deltaTime);
+            
             if (Vector3.Distance(transform.position, target) < 0.001f)
             {
                 break;

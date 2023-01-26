@@ -17,4 +17,7 @@ public static class AnimationConstants
     public const string EndPickUpTriggerName = "EndPickUp";
     public const string DanceTriggerName = "Dance";
     public const string CryTriggerName = "Cry";
+
+    // food spawner
+    public const string MuteTriggerName = "Mute";
 }
